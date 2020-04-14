@@ -2,16 +2,16 @@
 class Nsc < Formula
   desc "A tool for creating NATS account and user access configurations"
   homepage "https://github.com/nats-io/nsc"
-  version "0.4.2"
+  version "0.4.4"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/nats-io/nsc/releases/download/0.4.2/nsc-darwin-amd64.zip"
-    sha256 "a3ffc6f218a34876344a6591ee09e241593ee8992088ae020cea58a654499a92"
+    url "https://github.com/nats-io/nsc/releases/download/v0.4.4/nsc-darwin-amd64.zip"
+    sha256 "140c4f996651481afc15265e69f6f371050976ae35c11422afe8f8dbbdd0a298"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/nats-io/nsc/releases/download/0.4.2/nsc-linux-amd64.zip"
-      sha256 "b53efcfd730a39605c1c8ca5e7fa6f466b94866e26c914f8b8ecd2b13d0925b9"
+      url "https://github.com/nats-io/nsc/releases/download/v0.4.4/nsc-linux-amd64.zip"
+      sha256 "a6c9f5de73419f74412291a6d0b03285cd4415b0125e06eb1281ecb3c84ee0ff"
     end
   end
 
