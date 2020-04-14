@@ -6,12 +6,12 @@ class Nsc < Formula
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/nats-io/nsc/releases/download/v0.4.4/nsc-darwin-amd64.zip"
-    sha256 "140c4f996651481afc15265e69f6f371050976ae35c11422afe8f8dbbdd0a298"
+    url "https://github.com/nats-io/nsc/releases/download/0.4.4/nsc-darwin-amd64.zip"
+    sha256 "6c95dc33a5d5efbc070189c8058a8d64c30ae04c97a622601e79fb373c99527c"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/nats-io/nsc/releases/download/v0.4.4/nsc-linux-amd64.zip"
-      sha256 "a6c9f5de73419f74412291a6d0b03285cd4415b0125e06eb1281ecb3c84ee0ff"
+      url "https://github.com/nats-io/nsc/releases/download/0.4.4/nsc-linux-amd64.zip"
+      sha256 "81ae389bd9b325fa60491bb1ae5861c8c081e05ff295eaad0d16f06f6ad7e334"
     end
   end
 
