@@ -6,20 +6,20 @@ class Nats < Formula
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/nats-io/natscli/releases/download/0.0.20/nats-darwin-amd64.zip"
-    sha256 "cdbdfaf48e1e5217c0f834f9065434eb3e2b97ece3d15099df98119fa837e063"
+    url "https://github.com/nats-io/natscli/releases/download/0.0.20/nats-0.0.20-darwin-amd64.zip"
+    sha256 "49e0a2d5abd6f880be14af60e91a0b6d20fd5dbf79e1ddc0f4583fb49772bf8d"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/nats-io/natscli/releases/download/0.0.20/nats-linux-amd64.zip"
-    sha256 "ed831ef34ef1c0f7b61e45a8da4b28c51dcb9006cd8e71752b8648af9654a26d"
+    url "https://github.com/nats-io/natscli/releases/download/0.0.20/nats-0.0.20-linux-amd64.zip"
+    sha256 "2652c61fe370b493db7ce9023b5997f78cb8bd7fb61b7070e836fbb19d24b266"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/nats-io/natscli/releases/download/0.0.20/nats-linux-arm.zip"
-    sha256 "869f20b4355458a5659431ab1825dade21353fe46658ddb4d0b5912b4c9ff814"
+    url "https://github.com/nats-io/natscli/releases/download/0.0.20/nats-0.0.20-linux-arm6.zip"
+    sha256 "7a9c7fa145dadd9aa8447c48f4863d04417c16198c709d0e9d6fe8021df0b011"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/nats-io/natscli/releases/download/0.0.20/nats-linux-arm64.zip"
-    sha256 "6436facd67ebbda859f5e3966dce83f724e483af60c152da4bc7d408ca6680c3"
+    url "https://github.com/nats-io/natscli/releases/download/0.0.20/nats-0.0.20-linux-arm64.zip"
+    sha256 "04dbd8e3c4d6618e1977724aff4178d0f5be3488bb8890d066496868f10e8399"
   end
 
   def install
