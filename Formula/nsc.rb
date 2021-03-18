@@ -10,11 +10,11 @@ class Nsc < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/nats-io/nsc/releases/download/2.2.0/nsc-darwin-amd64.zip"
-    sha256 "52cd87d2b8221c24036e32c430a01578720033d5689e38e70e8e804d5812ee6d"
+    sha256 "397f899e6d1ca9f5b420754bcf63622b7f4a8820e042fc19cce51bf6a8e6c057"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/nats-io/nsc/releases/download/2.2.0/nsc-linux-amd64.zip"
-    sha256 "13890af56e0342e2b890f4a2672d34f0c86e73c8d58d914df5dcf7f62e0ce6a2"
+    sha256 "660d5865feea451deaf8db16f4c6a13ef6131517fe5a4867ad45977f282646d2"
   end
 
   def install
