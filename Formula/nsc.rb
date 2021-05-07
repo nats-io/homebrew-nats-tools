@@ -8,7 +8,7 @@ class Nsc < Formula
   version "2.2.2"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
+  if OS.mac?
     url "https://github.com/nats-io/nsc/releases/download/2.2.2/nsc-darwin-amd64.zip"
     sha256 "e1389d5ec94d71f8b3a59ba651aab6b581cb66a1b48e0884d507fa45b76aaf39"
   end
