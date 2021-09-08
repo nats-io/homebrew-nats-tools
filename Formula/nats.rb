@@ -2,24 +2,24 @@
 class Nats < Formula
   desc "NATS utility"
   homepage "https://github.com/nats-io/nats"
-  version "0.0.25"
+  version "0.0.26"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/nats-io/natscli/releases/download/0.0.25/nats-0.0.25-darwin-amd64.zip"
-    sha256 "6f0a8eab69d01853c1e55ad091547e6cd3e3f1f9fd53d067adebc2201be6fde6"
+    url "https://github.com/nats-io/natscli/releases/download/0.0.26/nats-0.0.26-darwin-amd64.zip"
+    sha256 "c2ed469bbd5ab7a1623fc7d8fb62496c17e8f33d57ab9711eadd72e2c808a26f"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/nats-io/natscli/releases/download/0.0.25/nats-0.0.25-linux-amd64.zip"
-    sha256 "46f6e0da814a52fa9ec1ec0aa7262f9818451a3341aab4a61ff0010279fa0c50"
+    url "https://github.com/nats-io/natscli/releases/download/0.0.26/nats-0.0.26-linux-amd64.zip"
+    sha256 "d6a1f0aed5710eee69740fc1da24576a716076e7e3eca83a4772d1ea637a8fde"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/nats-io/natscli/releases/download/0.0.25/nats-0.0.25-linux-arm6.zip"
-    sha256 "814a74ea45bc81687b4aff6c6c8602eabaf22623766ecf799813e3144095e647"
+    url "https://github.com/nats-io/natscli/releases/download/0.0.26/nats-0.0.26-linux-arm6.zip"
+    sha256 "63c2d63eb4a5551473fc95ae73a9e9b9822f932f966e0dfd5ec14db8b1067e08"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/nats-io/natscli/releases/download/0.0.25/nats-0.0.25-linux-arm64.zip"
-    sha256 "9f998830aeb0405f8d8c926da1b700d596ba5511c36404d85511312a9d81abb8"
+    url "https://github.com/nats-io/natscli/releases/download/0.0.26/nats-0.0.26-linux-arm64.zip"
+    sha256 "c7574e6f5db365b0430a1bde90badbd1d28a747d91d5f6986b73e531d87995d1"
   end
 
   def install
