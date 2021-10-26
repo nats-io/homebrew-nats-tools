@@ -6,7 +6,6 @@ class Nsc < Formula
   desc "A tool for creating NATS account and user access configurations"
   homepage "https://github.com/nats-io/nsc"
   version "2.2.6"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/nats-io/nsc/releases/download/2.2.6/nsc-darwin-amd64.zip"
