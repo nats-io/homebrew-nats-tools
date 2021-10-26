@@ -3,7 +3,6 @@ class Nats < Formula
   desc "NATS utility"
   homepage "https://github.com/nats-io/nats"
   version "0.0.26"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/nats-io/natscli/releases/download/0.0.26/nats-0.0.26-darwin-amd64.zip"
