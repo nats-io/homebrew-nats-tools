@@ -5,28 +5,28 @@
 class Nsc < Formula
   desc "A tool for creating NATS account and user access configurations"
   homepage "https://github.com/nats-io/nsc"
-  version "2.3.0"
+  version "2.4.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nats-io/nsc/releases/download/2.3.0/nsc-darwin-amd64.zip"
-      sha256 "c9f4a7308682cf8154f651c5be8e9a9203b55b8ebd0fe34776a1d799c24e2a34"
+      url "https://github.com/nats-io/nsc/releases/download/2.4.0/nsc-darwin-amd64.zip"
+      sha256 "d96d2e477d5e73ee258dfcc98ecfe3d0a096fba982859584469c33b216245d52"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nats-io/nsc/releases/download/2.3.0/nsc-darwin-arm64.zip"
-      sha256 "13b095bf7269495011613fa7977ca2b765b27b98fbf4bfe5e44fdb774c081a31"
+      url "https://github.com/nats-io/nsc/releases/download/2.4.0/nsc-darwin-arm64.zip"
+      sha256 "6c435ea49255babaac1c39445ecc061d0b9cdaa288bb9db66437d24c3170d0a5"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/nats-io/nsc/releases/download/2.3.0/nsc-linux-amd64.zip"
-      sha256 "21bf1cc8d1cf2e09096206071f4e472c77baa4ff597f9306f503d372a0d5fb8c"
+      url "https://github.com/nats-io/nsc/releases/download/2.4.0/nsc-linux-amd64.zip"
+      sha256 "3d62e5bc99c1883bb9b51f59c79b80a425fd797fc5e9116b893f93f8b177dcf8"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nats-io/nsc/releases/download/2.3.0/nsc-linux-arm64.zip"
-      sha256 "8d9b508bc3b105c88d902b34108621cc9f7bac276ef69facc924dd6d5f94bb03"
+      url "https://github.com/nats-io/nsc/releases/download/2.4.0/nsc-linux-arm64.zip"
+      sha256 "a9d4967f9a6ff59df5517c61bce008815b9d5da7bc9d9858ba530c9f128deb3f"
     end
   end
 
