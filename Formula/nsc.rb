@@ -5,33 +5,44 @@
 class Nsc < Formula
   desc "A tool for creating NATS account and user access configurations"
   homepage "https://github.com/nats-io/nsc"
-  version "2.4.0"
-  bottle :unneeded
+  version "2.5.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/nats-io/nsc/releases/download/2.4.0/nsc-darwin-amd64.zip"
-      sha256 "d96d2e477d5e73ee258dfcc98ecfe3d0a096fba982859584469c33b216245d52"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/nats-io/nsc/releases/download/2.4.0/nsc-darwin-arm64.zip"
-      sha256 "6c435ea49255babaac1c39445ecc061d0b9cdaa288bb9db66437d24c3170d0a5"
+      url "https://github.com/nats-io/nsc/releases/download/2.5.0/nsc-darwin-arm64.zip"
+      sha256 "778a7077e7b7ff9bcea9777c2cc924db2849933b69ad364ec7566c8f246a9cc0"
+
+      def install
+        bin.install "nsc"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/nats-io/nsc/releases/download/2.5.0/nsc-darwin-amd64.zip"
+      sha256 "c087c138640ac840538eb2846cea220689f11d14fc6900bc5f63e9b14c90abab"
+
+      def install
+        bin.install "nsc"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/nats-io/nsc/releases/download/2.4.0/nsc-linux-amd64.zip"
-      sha256 "3d62e5bc99c1883bb9b51f59c79b80a425fd797fc5e9116b893f93f8b177dcf8"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nats-io/nsc/releases/download/2.4.0/nsc-linux-arm64.zip"
-      sha256 "a9d4967f9a6ff59df5517c61bce008815b9d5da7bc9d9858ba530c9f128deb3f"
-    end
-  end
+      url "https://github.com/nats-io/nsc/releases/download/2.5.0/nsc-linux-arm64.zip"
+      sha256 "e95a96acfd2e515d3778dc4064ffebadbd56e28dfcc55177b49b9b5389a5b768"
 
-  def install
-    bin.install "nsc"
+      def install
+        bin.install "nsc"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/nats-io/nsc/releases/download/2.5.0/nsc-linux-amd64.zip"
+      sha256 "83897bd1702f20335cb1745f68c01c495f24459057638de63842cdde3c056f35"
+
+      def install
+        bin.install "nsc"
+      end
+    end
   end
 
   test do
