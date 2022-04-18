@@ -5,12 +5,12 @@
 class Nsc < Formula
   desc "A tool for creating NATS account and user access configurations"
   homepage "https://github.com/nats-io/nsc"
-  version "2.7.0"
+  version "2.7.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/nats-io/nsc/releases/download/2.7.0/nsc-darwin-arm64.zip"
-      sha256 "549c0b3ae9a2cf2c01158eb889e45fb59c69f3c75b4d9aeffdb32eb39061addb"
+      url "https://github.com/nats-io/nsc/releases/download/2.7.1/nsc-darwin-arm64.zip"
+      sha256 "18406726719c787d13c5ae241c3cbdf4d5a7a348d68f07aab7f359f2c713a8b3"
 
       def install
         bin.install "nsc"
@@ -19,17 +19,17 @@ class Nsc < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nats-io/nsc/releases/download/2.7.0/nsc-linux-arm64.zip"
-      sha256 "88ce31ec497163eeaa658803e8fd614ddc9e5f717187ef12872b0ec2c6dfa49b"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/nats-io/nsc/releases/download/2.7.1/nsc-linux-arm.zip"
+      sha256 "b56d3ad2997ad6ed02ab1fc26dbff840ffcaedb4b071cd811a336cf2d1226a8b"
 
       def install
         bin.install "nsc"
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/nats-io/nsc/releases/download/2.7.0/nsc-linux-arm.zip"
-      sha256 "551671fe7fa299694640096b12ed359ccfe307665a5e6d762ec454dcdfb5f67f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/nats-io/nsc/releases/download/2.7.1/nsc-linux-arm64.zip"
+      sha256 "3ddf8c0d6b4b6d0ad1a50403fb096a121801ddcdd187d95774fd78abca45561b"
 
       def install
         bin.install "nsc"
