@@ -16,6 +16,14 @@ class Nsc < Formula
         bin.install "nsc"
       end
     end
+    if Hardware::CPU.intel?
+      url "https://github.com/nats-io/nsc/releases/download/2.7.1/nsc-darwin-amd64.zip"
+      sha256 "606ff0bc98b3249091036fd6ea62c10abae18e03a847336e1e04412881ef1be7"
+
+      def install
+        bin.install "nsc"
+      end
+    end
   end
 
   on_linux do
