@@ -5,20 +5,20 @@
 class Nats < Formula
   desc "NATS utility"
   homepage "https://github.com/nats-io/nats"
-  version "0.0.33"
+  version "0.0.34"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/nats-io/natscli/releases/download/v0.0.33/nats-0.0.33-darwin-arm64.zip"
-      sha256 "70a9134d5d67857517f639ac5081cf0adbfd66310c634c8784f670cc4c610cc0"
+      url "https://github.com/nats-io/natscli/releases/download/v0.0.34/nats-0.0.34-darwin-arm64.zip"
+      sha256 "090d30e655f5508dbbd92fb38b7a3398ece3e51e5838a21c98cd61c4836827f7"
 
       def install
         bin.install "nats"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nats-io/natscli/releases/download/v0.0.33/nats-0.0.33-darwin-amd64.zip"
-      sha256 "84702c7a01ff12ad866c923ee59fbef2a7d6e490189b4fc70bc71d447d210067"
+      url "https://github.com/nats-io/natscli/releases/download/v0.0.34/nats-0.0.34-darwin-amd64.zip"
+      sha256 "3831b152adce8d220fb976c3491ff7ae0173288ada8124ea998af23a2d77db8a"
 
       def install
         bin.install "nats"
@@ -28,24 +28,24 @@ class Nats < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/nats-io/natscli/releases/download/v0.0.33/nats-0.0.33-linux-arm6.zip"
-      sha256 "651761e101b352811895806dac4a6ad62e4e352b022dc4334ba7270721cbc21c"
+      url "https://github.com/nats-io/natscli/releases/download/v0.0.34/nats-0.0.34-linux-arm6.zip"
+      sha256 "c36f322ebd73986f8ec82604ca6aa4de0d15605ddff0c4d16baf3e0d1c30fc15"
 
       def install
         bin.install "nats"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nats-io/natscli/releases/download/v0.0.33/nats-0.0.33-linux-arm64.zip"
-      sha256 "b7c523c4bde007d29c6b4247a9d2f16fe84727ff945b3a0d53ef2889c783e477"
+      url "https://github.com/nats-io/natscli/releases/download/v0.0.34/nats-0.0.34-linux-arm64.zip"
+      sha256 "a8a1d3f42d460bd5ac5407f78a4ceda1d731ee8bd363efc9b808d8b592c65fb6"
 
       def install
         bin.install "nats"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nats-io/natscli/releases/download/v0.0.33/nats-0.0.33-linux-amd64.zip"
-      sha256 "e1f8cbece8b7f5c24e0e4cb884ea44f2b40b47231b6fe28aefb30f19de16be88"
+      url "https://github.com/nats-io/natscli/releases/download/v0.0.34/nats-0.0.34-linux-amd64.zip"
+      sha256 "4f57234271b0600dc905933e6add707a36fb14353090de3c973220e8f8e2d65b"
 
       def install
         bin.install "nats"
