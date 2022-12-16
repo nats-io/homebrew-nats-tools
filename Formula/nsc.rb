@@ -5,20 +5,20 @@
 class Nsc < Formula
   desc "A tool for creating NATS account and user access configurations"
   homepage "https://github.com/nats-io/nsc"
-  version "2.7.1"
+  version "2.7.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nats-io/nsc/releases/download/2.7.1/nsc-darwin-amd64.zip"
-      sha256 "d68a0566ce11d70db65f19b288f97b43b69b6c54eccd9ba408181eb561197583"
+      url "https://github.com/nats-io/nsc/releases/download/v2.7.6/nsc-darwin-amd64.zip"
+      sha256 "fd2467f96d6478f140b98558dbb63e868b2b0e17d11597f976b4efac4e0ba39a"
 
       def install
         bin.install "nsc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nats-io/nsc/releases/download/2.7.1/nsc-darwin-arm64.zip"
-      sha256 "18406726719c787d13c5ae241c3cbdf4d5a7a348d68f07aab7f359f2c713a8b3"
+      url "https://github.com/nats-io/nsc/releases/download/v2.7.6/nsc-darwin-arm64.zip"
+      sha256 "b45112cf3b4a7d705d711ec919b39eab933483bf696470e8934c9bb297126007"
 
       def install
         bin.install "nsc"
@@ -27,25 +27,17 @@ class Nsc < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/nats-io/nsc/releases/download/2.7.1/nsc-linux-arm.zip"
-      sha256 "b56d3ad2997ad6ed02ab1fc26dbff840ffcaedb4b071cd811a336cf2d1226a8b"
-
-      def install
-        bin.install "nsc"
-      end
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/nats-io/nsc/releases/download/2.7.1/nsc-linux-amd64.zip"
-      sha256 "ebea437bff9d92ac0e7bbccadafde62eb4f967ee05ce9f12c531c3c7f3b19362"
+      url "https://github.com/nats-io/nsc/releases/download/v2.7.6/nsc-linux-amd64.zip"
+      sha256 "23de20941fa62dfe60f78ae9ce3150ba080b1771b59ce39663eb2cf35fde8419"
 
       def install
         bin.install "nsc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nats-io/nsc/releases/download/2.7.1/nsc-linux-arm64.zip"
-      sha256 "3ddf8c0d6b4b6d0ad1a50403fb096a121801ddcdd187d95774fd78abca45561b"
+      url "https://github.com/nats-io/nsc/releases/download/v2.7.6/nsc-linux-arm64.zip"
+      sha256 "3177fb269b9346710fbb5b441bd1c3e37ff28119547dcfbd71f193346e33f6c5"
 
       def install
         bin.install "nsc"
