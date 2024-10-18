@@ -6,6 +6,11 @@ class Nats < Formula
   homepage "https://github.com/nats-io/nats"
   version "0.1.5"
 
+  head do
+    url "https://github.com/nats-io/natscli.git", branch: "main"
+    depends_on "go" => :build
+  end
+
   on_macos do
     on_arm do
       url "https://github.com/nats-io/natscli/releases/download/v0.1.5/nats-0.1.5-darwin-arm64.zip"
@@ -34,7 +39,14 @@ class Nats < Formula
   end
 
   def install
-    bin.install "nats"
+    if build.head?
+      cd "nats" do
+        system "go", "build"
+        bin.install "nats"
+      end
+    else
+      bin.install "nats"
+    end
   end
 
   test do
