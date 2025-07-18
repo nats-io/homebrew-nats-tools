@@ -5,12 +5,12 @@
 class Nats < Formula
   desc "NATS utility"
   homepage "https://github.com/nats-io/natscli"
-  version "0.2.3"
+  version "0.2.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nats-io/natscli/releases/download/v0.2.3/nats-0.2.3-darwin-amd64.zip"
-      sha256 "03036c9b82b787869e3c285f8e28ededcc107c9bdacdcdf9d6a1fea80a74ed94"
+      url "https://github.com/nats-io/natscli/releases/download/v0.2.4/nats-0.2.4-darwin-amd64.zip"
+      sha256 "3d1fe52ec10c502dce739d2beff3860a3c55202908e478874342ae0733fa0345"
 
       def install
         bin.install "nats"
@@ -18,8 +18,8 @@ class Nats < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nats-io/natscli/releases/download/v0.2.3/nats-0.2.3-darwin-arm64.zip"
-      sha256 "b6258ef8b662e07902f9cec1a293c615a4d06f2aa30dce3c6b32f35a0c42f0f8"
+      url "https://github.com/nats-io/natscli/releases/download/v0.2.4/nats-0.2.4-darwin-arm64.zip"
+      sha256 "5b247ac80756f681fe1d4781d21d722177ed9d6c3170108f440e8cb2fdb1b422"
 
       def install
         bin.install "nats"
@@ -30,24 +30,24 @@ class Nats < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/nats-io/natscli/releases/download/v0.2.3/nats-0.2.3-linux-amd64.zip"
-      sha256 "89988cb2ace7f571aa284391e04f91c510c3987afb721e2743d52cea7649182c"
+      url "https://github.com/nats-io/natscli/releases/download/v0.2.4/nats-0.2.4-linux-amd64.zip"
+      sha256 "79f8404ed49b24a9dfea0fb97bb2438cbbe419c5dc14f70ef7ed570ed14c8bcf"
       def install
         bin.install "nats"
         generate_completions_from_executable(bin/"nats", shells: [:bash, :zsh], shell_parameter_format: "--completion-script-")
       end
     end
     if Hardware::CPU.arm? and !Hardware::CPU.is_64_bit?
-      url "https://github.com/nats-io/natscli/releases/download/v0.2.3/nats-0.2.3-linux-arm6.zip"
-      sha256 "8bcb5173f00acb6684c089df790399e2fe852bbc8ad8741e2ff5377a0cb6a0a7"
+      url "https://github.com/nats-io/natscli/releases/download/v0.2.4/nats-0.2.4-linux-arm6.zip"
+      sha256 "3fa5f023e41c1d66870d1698f4cfab484f73913b3fd1c8bdc363735d644f06e7"
       def install
         bin.install "nats"
         generate_completions_from_executable(bin/"nats", shells: [:bash, :zsh], shell_parameter_format: "--completion-script-")
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/nats-io/natscli/releases/download/v0.2.3/nats-0.2.3-linux-arm64.zip"
-      sha256 "1e5e13dc687f2c420d789c1ae80df39b6f7bb5c78c6fddc45f20dfa73e155600"
+      url "https://github.com/nats-io/natscli/releases/download/v0.2.4/nats-0.2.4-linux-arm64.zip"
+      sha256 "c325fb03a802ebd94c6f24d274ece465a7a6abe40566174e208b0fe67e2d8af4"
       def install
         bin.install "nats"
         generate_completions_from_executable(bin/"nats", shells: [:bash, :zsh], shell_parameter_format: "--completion-script-")
