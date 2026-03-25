@@ -5,13 +5,13 @@
 class Nsc < Formula
   desc "A tool for creating NATS account and user access configurations"
   homepage "https://github.com/nats-io/nsc"
-  version "2.12.2-canary"
+  version "2.12.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nats-io/nsc/releases/download/v2.12.2-canary/nsc-darwin-amd64.zip"
-      sha256 "441ea70432521c8749cff28c520547f713d5c34b2d68763f60cbf45c20028f68"
+      url "https://github.com/nats-io/nsc/releases/download/v2.12.2/nsc-darwin-amd64.zip"
+      sha256 "7f906b2b7b3013cb23e16937f94f4a399464050ac6a841f31056fd486e6d2685"
 
       define_method(:install) do
         bin.install "nsc"
@@ -19,8 +19,8 @@ class Nsc < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nats-io/nsc/releases/download/v2.12.2-canary/nsc-darwin-arm64.zip"
-      sha256 "af075ac3f467a5f867a165c4f94bb9aaf215b70112a14b2e48c8c91b444ea7b0"
+      url "https://github.com/nats-io/nsc/releases/download/v2.12.2/nsc-darwin-arm64.zip"
+      sha256 "abf0548b877fd74dcc0550fd07a7718f07515e6d55ccd48d27bdcefd6f95050f"
 
       define_method(:install) do
         bin.install "nsc"
@@ -31,24 +31,24 @@ class Nsc < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nats-io/nsc/releases/download/v2.12.2-canary/nsc-linux-amd64.zip"
-      sha256 "b4bfa20febe91755e7c12f49e65ab14ce8c79ec591902c01e21062cfb54dc97d"
+      url "https://github.com/nats-io/nsc/releases/download/v2.12.2/nsc-linux-amd64.zip"
+      sha256 "8414c04db40a7ee18c3ce389604230c2f327c0093fd1c84cb237dfe94480af5f"
       define_method(:install) do
         bin.install "nsc"
         generate_completions_from_executable(bin/"nsc", "completion")
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/nats-io/nsc/releases/download/v2.12.2-canary/nsc-linux-armv6.zip"
-      sha256 "06c0aa7a57ef87ff3423727e77e1ff092e9e602b1c1867f24f53ae6bcf36274d"
+      url "https://github.com/nats-io/nsc/releases/download/v2.12.2/nsc-linux-armv6.zip"
+      sha256 "b2d95bedbe20e6018cba72bab54647ae1d5f978cbe26f714c63ce92f5481cdf6"
       define_method(:install) do
         bin.install "nsc"
         generate_completions_from_executable(bin/"nsc", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nats-io/nsc/releases/download/v2.12.2-canary/nsc-linux-arm64.zip"
-      sha256 "8c7cdcb672179295321ee89b83cac8e62ef32f1d490799043198d68a2998cd03"
+      url "https://github.com/nats-io/nsc/releases/download/v2.12.2/nsc-linux-arm64.zip"
+      sha256 "c9d0c45ddfce5107df2a53d5fd061c4e94ba1e3b703c4879f1ab4cbf1ac630bc"
       define_method(:install) do
         bin.install "nsc"
         generate_completions_from_executable(bin/"nsc", "completion")
